@@ -9,8 +9,8 @@ get("/") do
 end
 
 post("/places") do
-  description = params.fetch("locations")
-  palces = Places.new(locations)
+  location = params.fetch("location")
+  places = Places.new(location)
   places.save()
   erb(:success)
 end
